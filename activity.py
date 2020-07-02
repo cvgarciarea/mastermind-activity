@@ -192,10 +192,10 @@ class Mastermind(activity.Activity):
 
     def write_file(self, path):
         data = self.canvas.get_game_data()
-        self.metadata["level"] = data["level"]
-        self.metadata["difficulty"] = data["difficulty"]
-        self.metadata["correct"] = data["correct"]
-        self.metadata["balls"] = data["balls"]
+        self.metadata["level"] = str(data["level"])
+        self.metadata["difficulty"] = str(data["difficulty"])
+        self.metadata["correct"] = str(data["correct"])
+        self.metadata["balls"] = str(data["balls"])
 
     def _ok_cb(self, button):
         self.canvas.end_turn()
